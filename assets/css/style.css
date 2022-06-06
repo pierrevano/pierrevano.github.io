@@ -1,42 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Droid+Sans+Mono&display=swap");
-
-body {
-  background: #fafbfc;
-  color: #24292e;
-  font-family: "Droid Sans Mono", monospace;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-p {
-  font-size: 1rem;
-}
-
 p img {
-  margin-bottom: 10px;
+  margin-right: 5px !important;
+}
+
+p.first-intro a,
+ul a {
+  color: var(--color-fg-default) !important;
 }
 
 ul {
-  margin-left: -10px;
+  padding-left: 0 !important;
 }
 
 li {
   display: inline;
   list-style: none;
-}
-
-a {
-  color: #000;
-}
-
-.websites {
-  color: #4b89bf;
-  font-style: italic;
-  text-decoration: none;
 }
 
 .fa-adjust {
@@ -47,11 +24,7 @@ a {
 
 .fa-3x {
   font-size: 2.3rem;
-  padding: 10px;
-}
-
-.fa-file-pdf-o:hover {
-  color: #0260fb;
+  padding: 10px 20px 10px 0;
 }
 
 .fa-envelope:hover {
@@ -66,38 +39,10 @@ a {
   color: #007bb6;
 }
 
-.fa-facebook:hover {
-  color: #3b5998;
-}
-
 .fa-twitter:hover {
   color: #00aced;
 }
 
-.fa-instagram:hover {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background: linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
-}
-
 .fa-youtube:hover {
   color: #bb0000;
-}
-
-.fa-tumblr:hover {
-  color: #32506d;
-}
-
-.fa-soundcloud:hover {
-  color: #ff3a00;
-}
-
-.websites.nightmode {
-  color: #5aa6e8;
-}
-
-.nightmode {
-  background: #24292e;
-  color: #fafbfc;
 }

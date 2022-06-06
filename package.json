@@ -1,0 +1,22 @@
+{
+  "name": "pierrevano.github.io",
+  "description": "Pierre Vanoverschelde website",
+  "version": "2.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write \"**/*\""
+  },
+  "prettier": {
+    "printWidth": 200
+  },
+  "author": "Pierre Vanoverschelde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierrevano/pierrevano.github.io/issues"
+  },
+  "homepage": "https://github.com/pierrevano/pierrevano.github.io",
+  "dependencies": {
+    "prettier": "^2.6.2"
+  }
+}

@@ -1,25 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll("html, body, a");
-  const preferences = localStorage.getItem("preferences");
-  if (preferences === "nightmode") {
-    elements.forEach((element) => {
-      element.classList.add("nightmode");
-    });
-  }
-  function toggleNightmode() {
-    if (elements[0].classList.contains("nightmode")) {
-      localStorage.removeItem("preferences");
-      elements.forEach((element) => {
-        element.classList.remove("nightmode");
-      });
-    } else {
-      localStorage.setItem("preferences", "nightmode");
-      elements.forEach((element) => {
-        element.classList.add("nightmode");
-      });
-    }
-  }
-  document
-    .querySelector("i.toggle-light")
-    .addEventListener("click", toggleNightmode);
+const storageKey = "theme-preference";
+
+const onClick = () => {
+  theme.value = theme.value === "light" ? "dark" : "light";
+  setPreference();
+};
+
+const getColorPreference = () => {
+  if (localStorage.getItem(storageKey)) return localStorage.getItem(storageKey);
+  else return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
+
+const setPreference = () => {
+  localStorage.setItem(storageKey, theme.value);
+  reflectPreference();
+};
+
+const reflectPreference = () => {
+  document.firstElementChild.setAttribute("data-theme", theme.value);
+  document.querySelector("i.toggle-light")?.setAttribute("aria-label", theme.value);
+};
+
+const theme = {
+  value: getColorPreference(),
+};
+
+reflectPreference();
+
+window.onload = () => {
+  reflectPreference();
+  document.querySelector("i.toggle-light").addEventListener("click", onClick);
+};
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches: isDark }) => {
+  theme.value = isDark ? "dark" : "light";
+  setPreference();
 });
