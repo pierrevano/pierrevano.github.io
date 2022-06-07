@@ -1,0 +1,79 @@
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-3x {
+  font-size: 2.3rem;
+  padding: 10px 20px 10px 0;
+}
+
+.fa-adjust {
+  cursor: pointer;
+  display: inline;
+  font-size: 8px;
+}
+
+.fa-adjust:before {
+  content: "\f042";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-youtube:before {
+  content: "\f167";
+}
+
+.fa-envelope:hover {
+  color: #6946f3;
+}
+
+.fa-github:hover {
+  color: #333;
+}
+
+.fa-linkedin:hover {
+  color: #007bb6;
+}
+
+.fa-twitter:hover {
+  color: #00aced;
+}
+
+.fa-youtube:hover {
+  color: #bb0000;
+}
