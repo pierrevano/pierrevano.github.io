@@ -1,5 +1,13 @@
 p img {
-  margin-right: 5px !important;
+  margin: 0 5px 5px 0;
+}
+
+p.first-intro {
+  margin-top: -5px;
+}
+
+p.second-intro a {
+  white-space: nowrap;
 }
 
 p.first-intro a,
