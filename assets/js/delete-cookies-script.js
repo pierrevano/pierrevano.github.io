@@ -28,11 +28,7 @@
 
   var deleteCookie = function (name, domain, path) {
     path = path || "/";
-    var cookie = [
-      name + "=",
-      "expires=Thu, 01 Jan 1970 00:00:01 GMT",
-      "path=" + path,
-    ];
+    var cookie = [name + "=", "expires=Thu, 01 Jan 1970 00:00:01 GMT", "path=" + path];
     if (domain) {
       cookie.push("domain=" + domain);
     }
@@ -54,10 +50,7 @@
      * We check that we don't have any enabled entities
      * and that disabled entities are present
      */
-    return (
-      vendorsEnabledNumber + purposesEnabledNumber === 0 &&
-      vendorsDisabledNumber + purposesDisabledNumber > 0
-    );
+    return vendorsEnabledNumber + purposesEnabledNumber === 0 && vendorsDisabledNumber + purposesDisabledNumber > 0;
   };
 
   var consentEventsCount = 0;
@@ -71,8 +64,7 @@
        * -> 1. When user gives consent and updates it without the page reload (via `consentEventsCount` value)
        * -> 2. When user gives consent and updates it after the page reload (via `existingConsentString` value)
        */
-      var consentUpdate =
-        consentEventsCount > 0 ? true : !!existingConsentString;
+      var consentUpdate = consentEventsCount > 0 ? true : !!existingConsentString;
       if (consentUpdate && areAllVendorsAndPurposesDisabled()) {
         /**
          * Consent has been given previously and this is a consent update
@@ -83,10 +75,7 @@
             return cookie.split("=")[0].trim();
           })
           .filter(function (cookieName) {
-            return (
-              itemsToKeep.indexOf(cookieName) === -1 &&
-              !cookieName.match(itemsToKeepRegex)
-            );
+            return itemsToKeep.indexOf(cookieName) === -1 && !cookieName.match(itemsToKeepRegex);
           });
 
         /**
@@ -96,9 +85,7 @@
           /**
            * Delete from every possible domain (based on the current page domain) :
            */
-          var domains = (
-            ".#" + document.location.host.replaceAll(".", "#.#")
-          ).split("#");
+          var domains = (".#" + document.location.host.replaceAll(".", "#.#")).split("#");
 
           while (domains.length) {
             var possibleDomain = domains.join("");
@@ -108,14 +95,9 @@
           deleteCookie(cookieToDelete, "");
         });
 
-        var localStorageItemsToDelete = Object.keys(window.localStorage).filter(
-          function (localStorageItemName) {
-            return (
-              itemsToKeep.indexOf(localStorageItemName) === -1 &&
-              !localStorageItemName.match(itemsToKeepRegex)
-            );
-          }
-        );
+        var localStorageItemsToDelete = Object.keys(window.localStorage).filter(function (localStorageItemName) {
+          return itemsToKeep.indexOf(localStorageItemName) === -1 && !localStorageItemName.match(itemsToKeepRegex);
+        });
 
         /**
          * Delete local storage items
