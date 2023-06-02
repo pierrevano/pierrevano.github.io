@@ -5,10 +5,10 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier --write \"**/*\""
+    "prettier": "prettier --write ."
   },
   "prettier": {
-    "printWidth": 1000
+    "printWidth": 200
   },
   "author": "Pierre Vanoverschelde",
   "license": "ISC",
@@ -18,5 +18,13 @@
   "homepage": "https://github.com/pierrevano/pierrevano.github.io",
   "dependencies": {
     "prettier": "^2.6.2"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
