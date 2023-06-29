@@ -11,6 +11,24 @@
     />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" />
 
+    <script>
+      (() => {
+        const storageKey = "theme-preference";
+
+        const getColorPreference = () => {
+          const storedPreference = localStorage.getItem(storageKey);
+          if (storedPreference) {
+            return storedPreference;
+          } else {
+            return window.matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light";
+          }
+        };
+
+        const themeValue = getColorPreference();
+        document.documentElement.setAttribute("data-theme", themeValue);
+      })();
+    </script>
+
     <link rel="stylesheet" href="./assets/css/fontawesome.css" />
     <link rel="stylesheet" href="./assets/css/markdown.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
