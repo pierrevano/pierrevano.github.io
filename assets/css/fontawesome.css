@@ -51,10 +51,6 @@
   content: "\f0e1";
 }
 
-.fa-twitter:before {
-  content: "\f099";
-}
-
 .fa-youtube:before {
   content: "\f167";
 }
@@ -69,10 +65,6 @@
 
 .fa-linkedin:hover {
   color: #007bb6;
-}
-
-.fa-twitter:hover {
-  color: #00aced;
 }
 
 .fa-youtube:hover {
