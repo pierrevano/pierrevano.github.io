@@ -30,6 +30,7 @@ button.toggle-light {
   background: none;
   border: none;
   color: inherit;
+  cursor: pointer;
   font-size: 8px;
   padding: 0;
 }
