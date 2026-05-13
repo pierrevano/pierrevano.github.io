@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,6 +10,16 @@
       content="Currently working at Didomi as a Senior Technical Account Manager, while listening to some funk music on my headphones, I also love to scrape data and render it nicely."
     />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pierrevano.github.io" />
+    <meta property="og:title" content="Pierre Vanoverschelde" />
+    <meta
+      property="og:description"
+      content="Currently working at Didomi as a Senior Technical Account Manager, while listening to some funk music on my headphones, I also love to scrape data and render it nicely."
+    />
+
+    <meta name="twitter:card" content="summary" />
 
     <script>
       (() => {
@@ -33,13 +43,32 @@
     <link rel="stylesheet" href="./assets/css/markdown.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <script src="./assets/js/umami.js"></script>
-    <script src="./assets/js/darkmode.js"></script>
+    <script src="./assets/js/umami.js" defer></script>
+    <script src="./assets/js/darkmode.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pierre Vanoverschelde",
+        "jobTitle": "Senior Technical Account Manager",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Didomi",
+          "url": "https://www.didomi.io"
+        },
+        "url": "https://pierrevano.github.io",
+        "email": "pierreschelde@pm.me",
+        "sameAs": ["https://github.com/pierrevano", "https://www.linkedin.com/in/pierrevanoverschelde", "https://www.youtube.com/channel/UCpSMOn2qG_smhVFhInoxaVg"]
+      }
+    </script>
   </head>
 
   <body>
     <article class="markdown-body">
-      <h1>Hi, I'm Pierre Vanoverschelde<i class="fa fa-adjust toggle-light" aria-hidden="true" title="Switch theme"></i></h1>
+      <h1>
+        Hi, I'm Pierre Vanoverschelde<button class="toggle-light" aria-label="Switch to dark theme"><i class="fa fa-adjust" aria-hidden="true"></i></button>
+      </h1>
       <p>
         <img src="./assets/images/made-with-javascript.svg" alt="Made with JavaScript" title="Made with JavaScript" style="width: 227px; height: 35px" />
         <img src="./assets/images/powered-by-coffee.svg" alt="Powered by coffee" title="Powered by coffee" style="width: 246px; height: 35px" />
@@ -56,7 +85,7 @@
         Creator of
         <a href="https://whatson-app.com" target="_blank" class="websites"><code>What's on?</code></a
         >, <a href="https://documenter.getpostman.com/view/18186487/2s9Ykhg4MB" target="_blank" class="websites"><code>What's on? API</code></a> and
-        <a href="https://still-playing.onrender.com" target="_blank" class="websites"><code>Still playing?</code></a>
+        <a href="https://whatson-top-episodes.vercel.app" target="_blank" class="websites"><code>What's on? - Top rated episodes</code></a>
       </p>
       <p>If you want to know more about me, feel free to send me an email or follow me:</p>
       <ul>

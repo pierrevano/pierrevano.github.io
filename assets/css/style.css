@@ -1,9 +1,16 @@
 body {
   box-sizing: border-box;
-  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: clamp(20px, 5vw, 45px);
+}
+
+.markdown-body {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
   max-width: 980px;
-  margin: 0 auto;
-  padding: 45px;
+  width: 100%;
 }
 
 p img {

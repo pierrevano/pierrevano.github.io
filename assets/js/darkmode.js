@@ -25,9 +25,9 @@ const setPreference = () => {
 /* Update attributes in the DOM to reflect the current theme */
 const reflectPreference = () => {
   document.documentElement.setAttribute("data-theme", theme.value);
-  const toggleIcon = document.querySelector("i.toggle-light");
-  if (toggleIcon) {
-    toggleIcon.setAttribute("aria-label", theme.value);
+  const toggleButton = document.querySelector("button.toggle-light");
+  if (toggleButton) {
+    toggleButton.setAttribute("aria-label", theme.value === "dark" ? "Switch to light theme" : "Switch to dark theme");
   }
 };
 
@@ -36,12 +36,12 @@ const theme = {
   value: getColorPreference(),
 };
 
-/* Setup click listener for toggle icon and apply the initial color theme */
+/* Setup click listener for toggle button and apply the initial color theme */
 window.onload = () => {
   reflectPreference();
-  const toggleIcon = document.querySelector("i.toggle-light");
-  if (toggleIcon) {
-    toggleIcon.addEventListener("click", onClick);
+  const toggleButton = document.querySelector("button.toggle-light");
+  if (toggleButton) {
+    toggleButton.addEventListener("click", onClick);
   }
 };
 

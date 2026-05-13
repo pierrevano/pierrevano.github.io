@@ -1,4 +1,10 @@
-.jshintrc
-.prettierignore
+# AI
+.claude
+
+# Dependencies
 node_modules
 package-lock.json
+
+# Tools
+.jshintrc
+.prettierignore
